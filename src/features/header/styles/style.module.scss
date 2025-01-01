@@ -1,0 +1,39 @@
+@use "@/styles/theme";
+.headerContainer {
+  display: flex;
+  position: relative;
+}
+
+.menuContainer{
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+.headerContent{
+  font-size: 2rem;
+  margin: 1rem 1rem 1rem 4rem;
+
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: theme.$purple;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.headerTitle{
+  font-size: 3rem;
+  margin: 1rem;
+}
+
