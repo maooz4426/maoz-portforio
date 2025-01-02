@@ -6,24 +6,6 @@
   align-items: center;
   margin: 5rem;
 }
-// または、より複雑な光の効果
-@keyframes rotating-shadow {
-  0% {
-    box-shadow:
-            30px 0 30px -15px theme.$purple,
-            -30px 0 30px -15px theme.$purple,
-            0 30px 30px -15px theme.$purple,
-            0 -30px 30px -15px theme.$purple;
-  }
-  100% {
-    box-shadow:
-            30px 0 30px -15px theme.$purple,
-            -30px 0 30px -15px theme.$purple,
-            0 30px 30px -15px theme.$purple,
-            0 -30px 30px -15px theme.$purple;
-    transform: rotate(360deg);
-  }
-}
 
 .icon{
   border-radius: 50%;
