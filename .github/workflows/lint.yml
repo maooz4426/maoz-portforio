@@ -1,0 +1,32 @@
+name: lint
+on:
+  push:
+    branches:
+      - develop
+      - main
+  pull_request:
+    branches:
+      - develop
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: lint
+        uses: mongolyy/reviewdog-action-biome@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          fail_on_error: true
+
