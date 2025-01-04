@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": ["components/ui/**", "pnpm-lock.yml", ".next/**", "public/**"]
+		"ignore": ["components/ui/**", "pnpm-lock.yml", ".next/**", "public/**","tailwind.config.ts","**.json"]
 	},
 	"formatter": {
 		"enabled": true,
