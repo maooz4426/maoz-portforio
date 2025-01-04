@@ -6,9 +6,11 @@ export const Header = () => {
     <div className={style.headerContainer}>
       <div className={style.headerTitle}>MAOZ dev</div>
       <div className={style.menuContainer}>
-        <Link className={style.headerContent} href="/">Home</Link>
+        <Link className={style.headerContent} href="/">
+          Home
+        </Link>
         <Link className={style.headerContent} href="/about">
-            About
+          About
         </Link>
         <div className={style.headerContent}>Works</div>
       </div>
