@@ -1,0 +1,22 @@
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.profileContainer{
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+  //justify-content: center;
+}
+
+.name{
+  font-size: 3rem;
+}
+
+.detail{
+  font-size: 1rem;
+  margin: 0;
+}

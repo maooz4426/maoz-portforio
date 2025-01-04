@@ -1,7 +1,60 @@
+@use "@/styles/theme";
 .icon{
   margin: 1rem;
   transition: transform 0.2s ease;
   &:hover{
     transform: scale(1.5);
+  }
+}
+
+.profileIcon{
+  border-radius: 50%;
+  box-shadow:
+          0 0 3rem theme.$darkpurple;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.profileIcon::after ,.profileIcon::before{
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background:
+          conic-gradient(from var(--angle),
+          transparent 70%,
+         theme.$lightpurple
+          );
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 0.2rem;
+  translate: -50% -50%;
+  display: block;
+  z-index: -1;
+
+  animation: border-animation 1.5s linear infinite;
+}
+
+.profileIcon::before{
+  filter: blur(1.2rem);
+  opacity: 0.5;
+}
+
+@keyframes border-animation {
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
   }
 }
