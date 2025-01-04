@@ -24,10 +24,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: lint
-        uses: mongolyy/reviewdog-action-biome@v1
+        uses: mongolyy/reviewdog-action-biome@v1.6.4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
-          reviewdog_flags: "-fail-level=error"
+          fail-leve: error
+#          reviewdog_flags: "-fail-level=error"
           filter_mode: added
 
