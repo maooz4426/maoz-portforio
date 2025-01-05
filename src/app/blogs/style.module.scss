@@ -13,12 +13,29 @@
   margin: 1rem;
 }
 
-.blogs {
+.blogsContainer{
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
 
-.blog {
-  margin: auto
+
+.blogTitle{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  background: theme.$foreground;
+  color: theme.$white;
+  width: 30rem;
+  height: 19rem;
+  //margin: 1rem 0;
+  overflow: hidden;
 }
