@@ -1,12 +1,11 @@
-'use server'
-import { getLinkPreview } from 'link-preview-js';
-import {OGP} from "@/features/blog/types";
+"use server";
+import { OGP } from "@/features/blog/types";
+import { getLinkPreview } from "link-preview-js";
 
-export const fetchOgp = async (url: string) =>{
-    const data = await getLinkPreview(url, {
-        followRedirects: 'follow'
-    })
-    const ogps :OGP = data
-    return ogps
-}
-
+export const fetchOgp = async (url: string) => {
+  const data = await getLinkPreview(url, {
+    followRedirects: "follow",
+  });
+  const ogps: OGP = data;
+  return ogps;
+};
