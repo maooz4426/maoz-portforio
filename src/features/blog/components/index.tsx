@@ -21,12 +21,7 @@ export const BlogCard = (props: BlogCardProps) => {
       <Card className={style.card}>
         <Link href={props.ogp.url}>
           {/*<CardContent>*/}
-          <Image
-            width={500}
-            height={500}
-            src={props.ogp.images[0].toString()}
-            alt={"image"}
-          />
+          <Image width={500} height={500} src={props.ogp.images[0].toString()} alt={"image"} />
           <p className={style.blogTitle}>{props.ogp.title}</p>
           {/*</CardContent>*/}
         </Link>
