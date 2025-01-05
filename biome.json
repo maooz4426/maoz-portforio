@@ -3,11 +3,18 @@
 	"vcs": {
 		"enabled": false,
 		"clientKind": "git",
-		"useIgnoreFile": false
+		"useIgnoreFile": true
 	},
 	"files": {
-		"ignoreUnknown": false,
-		"ignore": ["components/ui/**", "pnpm-lock.yml", ".next/**", "public/**","tailwind.config.ts","next.config.ts"]
+		"ignoreUnknown": true,
+		"ignore": [
+			"components/ui/**",
+			"pnpm-lock.yml",
+			".next/**",
+			"public/**",
+			"tailwind.config.ts",
+			"next.config.ts"
+		]
 	},
 	"formatter": {
 		"enabled": true,
@@ -19,6 +26,7 @@
 	},
 	"linter": {
 		"enabled": true,
+		"ignore": ["**/*.json"],
 		"rules": {
 			"recommended": true,
 			"style": {
