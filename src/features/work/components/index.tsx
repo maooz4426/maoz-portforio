@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import style from "@/features/card/styles/style.module.scss";
+import style from "@/features/work/styles/style.module.scss";
 import Image from "next/image";
 
 type WorkCardProps = {

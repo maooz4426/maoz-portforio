@@ -50,7 +50,7 @@ const BlogsPage = () => {
                 //     transition={{duration: 0.5, delay: 0.5}}
                 //     key="image-container"
                 // >
-                //   <Card key={index} className={style.card}>
+                //   <Card key={index} className={style.work}>
                 //     <Link href={ogp.url}>
                 //       {/*<CardContent>*/}
                 //       <Image
