@@ -1,4 +1,5 @@
 @use "@/styles/theme";
+@use "@/styles/keyframes";
 .card{
   width: 30rem;
   height: 19rem;
@@ -17,32 +18,30 @@
     animation: neon-signs 1.5s ease infinite;
   }
 }
-
-@keyframes neon-signs {
-
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow:
-            -0.2rem -0.2rem 1rem #fff,
-            0.2rem 0.2rem 1rem #fff,
-            0 0 2rem theme.$lightpurple,
-            0 0 4rem theme.$lightpurple,
-            0 0 6rem theme.$lightpurple,
-            0 0 8rem theme.$lightpurple,
-            0 0 10rem theme.$lightpurple;
-    box-shadow:
-            0 0 .5rem #fff,
-            inset 0 0 .5rem #fff,
-            0 0 2rem theme.$lightpurple,
-            inset 0 0 2rem theme.$lightpurple,
-            0 0 4rem theme.$lightpurple,
-            inset 0 0 4rem theme.$lightpurple;
-  }
-
-  20%, 24%, 55% {
-    text-shadow: none;
-    box-shadow: none;
-  }
-}
+//
+//@keyframes neon-signs {
+//  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+//    text-shadow:
+//            -0.2rem -0.2rem 1rem #fff,
+//            0.2rem 0.2rem 1rem #fff,
+//            0 0 2rem theme.$lightpurple,
+//            0 0 4rem theme.$lightpurple,
+//            0 0 6rem theme.$lightpurple,
+//            0 0 8rem theme.$lightpurple,
+//            0 0 10rem theme.$lightpurple;
+//    box-shadow:
+//            0 0 .5rem #fff,
+//            inset 0 0 .5rem #fff,
+//            0 0 2rem theme.$lightpurple,
+//            inset 0 0 2rem theme.$lightpurple,
+//            0 0 4rem theme.$lightpurple,
+//            inset 0 0 4rem theme.$lightpurple;
+//  }
+//  20%, 24%, 55% {
+//    text-shadow: none;
+//    box-shadow: none;
+//  }
+//}
 
 .title{
   font-size: 1.5rem;
