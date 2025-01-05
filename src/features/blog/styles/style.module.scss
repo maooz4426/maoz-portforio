@@ -1,0 +1,22 @@
+@use "@/styles/theme";
+@use "@/styles/keyframes";
+
+.blogTitle{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  background: theme.$foreground;
+  color: theme.$white;
+  width: 30rem;
+  height: 19rem;
+  overflow: hidden;
+
+  &:hover{
+    animation: neon-signs 1.5s ease infinite;
+  }
+}
+
+
+

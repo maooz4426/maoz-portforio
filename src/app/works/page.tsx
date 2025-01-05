@@ -1,4 +1,4 @@
-import { WorkCard } from "@/features/card/components";
+import { WorkCard } from "@/features/work/components";
 import style from "./style.module.scss";
 
 const WorksPage = () => {

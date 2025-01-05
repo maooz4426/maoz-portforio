@@ -1,0 +1,41 @@
+@use "@/styles/theme";
+.titleContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  width: auto;
+  font-size: 3rem ;
+
+  border-bottom: 0.1rem solid theme.$white;
+  padding: 0 1rem;
+  margin: 1rem;
+}
+
+.blogsContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+
+.blogTitle{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  background: theme.$foreground;
+  color: theme.$white;
+  width: 30rem;
+  height: 19rem;
+  //margin: 1rem 0;
+  overflow: hidden;
+}
