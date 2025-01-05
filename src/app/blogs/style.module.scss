@@ -1,0 +1,24 @@
+@use "@/styles/theme";
+.titleContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  width: auto;
+  font-size: 3rem ;
+
+  border-bottom: 0.1rem solid theme.$white;
+  padding: 0 1rem;
+  margin: 1rem;
+}
+
+.blogs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.blog {
+  margin: auto
+}

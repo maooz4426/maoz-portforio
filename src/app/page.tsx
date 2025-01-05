@@ -12,6 +12,7 @@ export default function Home() {
         <LinkIcon width={80} height={80} href="https://qiita.com/maooz4426" src="/Qiita.png" />
         <LinkIcon width={80} height={80} href="https://mixi.social/@maooz4426" src="mixi2.svg" />
       </div>
+        
     </div>
   );
 }
