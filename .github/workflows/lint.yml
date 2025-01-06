@@ -28,6 +28,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
-          reviewdog_flags: "-fail-level=error"
+          reviewdog_flags: "-fail-level=warning"
           filter_mode: added
 
