@@ -48,12 +48,21 @@ export type ParsedQiitaItem = {
   url: string;
 };
 
+type VideoData = {
+  url?: string;
+  secureUrl?: string | null;
+  type?: string | null;
+  width?: string;
+  height?: string;
+}
+
+
 export type OGP = {
-  url: string;
-  images: Array<string>;
-  videos: Array<string>;
-  title: string;
-  siteName: string;
-  description: string;
-  mediaType: string;
+  url?: string;
+  images?: Array<string>;
+  videos?: VideoData[];
+  title?: string;
+  siteName?: string;
+  description?: string;
+  mediaType?: string;
 };
