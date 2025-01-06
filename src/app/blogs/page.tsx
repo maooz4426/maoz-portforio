@@ -35,17 +35,16 @@ const BlogsPage = () => {
     <>
       <AnimatePresence mode="wait">
         <div className={style.titleContainer}>
-          <p className={style.title}>B<span>L</span>O<span>G</span>S</p>
+          <p className={style.title}>
+            B<span>L</span>O<span>G</span>S
+          </p>
         </div>
         <div className={style.blogsContainer}>
           <div className={style.blogs}>
             {ogps?.map((ogp, index) => {
               if (!ogp?.images?.[0]) return null;
 
-              return (
-                <BlogCard key={index} ogp={ogp} />
-
-              );
+              return <BlogCard key={index} ogp={ogp} />;
             })}
           </div>
         </div>

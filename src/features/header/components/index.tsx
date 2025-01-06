@@ -4,7 +4,9 @@ import Link from "next/link";
 export const Header = () => {
   return (
     <div className={style.headerContainer}>
-      <div className={style.headerTitle}>M<span>A</span>OZ dev</div>
+      <div className={style.headerTitle}>
+        M<span>A</span>OZ dev
+      </div>
       <div className={style.menuContainer}>
         <Link className={style.headerContent} href="/">
           <span>H</span>ome
