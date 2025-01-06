@@ -4,19 +4,21 @@ import Link from "next/link";
 export const Header = () => {
   return (
     <div className={style.headerContainer}>
-      <div className={style.headerTitle}>MAOZ dev</div>
+      <div className={style.headerTitle}>
+        M<span>A</span>OZ dev
+      </div>
       <div className={style.menuContainer}>
         <Link className={style.headerContent} href="/">
-          Home
+          <span>H</span>ome
         </Link>
-        <Link className={style.headerContent} href="/about">
-          About
+        <Link className={style.about} href="/about">
+          A<span>b</span>out
         </Link>
-        <Link className={style.headerContent} href="/works">
-          Works
+        <Link className={style.works} href="/works">
+          Wo<span>r</span>ks
         </Link>
-        <Link className={style.headerContent} href="/blogs">
-          Blogs
+        <Link className={style.blogs} href="/blogs">
+          Blo<span>g</span>s
         </Link>
       </div>
     </div>

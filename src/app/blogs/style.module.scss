@@ -1,4 +1,5 @@
 @use "@/styles/theme";
+@use "@/styles/animation";
 .titleContainer{
   display: flex;
   justify-content: center;
@@ -7,10 +8,15 @@
 .title{
   width: auto;
   font-size: 3rem ;
+  color: theme.$hotblue;
+  text-shadow: 0 0 2rem theme.$hotblue;
 
-  border-bottom: 0.1rem solid theme.$white;
+  border-bottom: 0.1rem solid theme.$hotblue;
   padding: 0 1rem;
   margin: 1rem;
+}
+.title span{
+  @include animation.blinkText
 }
 
 .blogsContainer{
@@ -36,6 +42,5 @@
   color: theme.$white;
   width: 30rem;
   height: 19rem;
-  //margin: 1rem 0;
   overflow: hidden;
 }

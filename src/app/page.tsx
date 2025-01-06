@@ -1,4 +1,5 @@
-import { LinkIcon, ProfileIcon } from "@/features/icon/components";
+import { LinkIcon } from "@/features/icon/components/LinkIcon";
+import { ProfileIcon } from "@/features/icon/components/ProfileIcon";
 import style from "./style.module.scss";
 export default function Home() {
   return (

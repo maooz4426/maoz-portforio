@@ -1,4 +1,6 @@
 @use "@/styles/theme";
+@use "@/styles/animation";
+
 .worksContainer{
   display: flex;
   flex-direction: column;
@@ -8,13 +10,22 @@
 
 .title{
   font-size: 3rem;
+  color: theme.$hotyellow;
+  text-shadow: 0 0 2rem theme.$hotyellow;
   //padding: 0;
   margin: 1rem;
-  border-bottom: solid 0.1rem theme.$white;
+  border-bottom: solid 0.2rem theme.$hotyellow;
 }
+
+.title span{
+  //animation: blink 1.0s ease infinite;
+  @include animation.blinkText
+}
+
 
 .workCardContainer{
   display: flex;
   margin: auto;
   gap: 1rem;
 }
+

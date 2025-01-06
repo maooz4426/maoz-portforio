@@ -1,11 +1,4 @@
 @use "@/styles/theme";
-.icon{
-  margin: 1rem;
-  transition: transform 0.2s ease;
-  &:hover{
-    transform: scale(1.5);
-  }
-}
 
 .profileIcon{
   border-radius: 50%;
@@ -30,8 +23,8 @@
   border-radius: 50%;
   background:
           conic-gradient(from var(--angle),
-          transparent 70%,
-          theme.$lightpurple
+                  transparent 70%,
+                  theme.$lightpurple
           );
   top: 50%;
   left: 50%;
