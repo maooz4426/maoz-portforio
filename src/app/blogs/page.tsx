@@ -35,7 +35,7 @@ const BlogsPage = () => {
     <>
       <AnimatePresence mode="wait">
         <div className={style.titleContainer}>
-          <p className={style.title}>Blogs</p>
+          <p className={style.title}>B<span>L</span>O<span>G</span>S</p>
         </div>
         <div className={style.blogsContainer}>
           <div className={style.blogs}>
@@ -44,28 +44,7 @@ const BlogsPage = () => {
 
               return (
                 <BlogCard key={index} ogp={ogp} />
-                // <motion.div
-                //     initial={{opacity: 0}}
-                //     animate={{opacity: 1}}
-                //     transition={{duration: 0.5, delay: 0.5}}
-                //     key="image-container"
-                // >
-                //   <Card key={index} className={style.work}>
-                //     <Link href={ogp.url}>
-                //       {/*<CardContent>*/}
-                //       <Image
-                //           key={index} // もしくは一意のID
-                //           width={500}
-                //           height={500}
-                //           src={ogp.images[0].toString()}
-                //           alt={"image"}
-                //           className={style.blog}
-                //       />
-                //       <p className={style.blogTitle}>{ogp.title}</p>
-                //       {/*</CardContent>*/}
-                //     </Link>
-                //   </Card>
-                // </motion.div>
+
               );
             })}
           </div>

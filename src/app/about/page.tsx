@@ -1,9 +1,14 @@
-import { ProfileIcon } from "@/features/icon/components";
+import { ProfileIcon } from "@/features/icon/components/ProfileIcon";
 import style from "./style.module.scss";
 
 const AboutPage = () => {
   return (
+      <>
+<div className={style.titleContainer}>
+      <p className={style.title}>A<span>B</span>OU<span>T</span></p>
+</div>
     <div className={style.aboutContainer}>
+
       <div>
         <ProfileIcon width={500} height={500} />
       </div>
@@ -15,6 +20,7 @@ const AboutPage = () => {
         <p className={style.detail}>Nextend　正会員</p>
       </div>
     </div>
+      </>
   );
 };
 
