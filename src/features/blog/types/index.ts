@@ -49,9 +49,9 @@ export type ParsedQiitaItem = {
 };
 
 export type OGP = {
-  url: URL;
-  images: Array<URL>;
-  videos: Array<URL>;
+  url: string;
+  images: Array<string>;
+  videos: Array<string>;
   title: string;
   siteName: string;
   description: string;
