@@ -54,8 +54,7 @@ type VideoData = {
   type?: string | null;
   width?: string;
   height?: string;
-}
-
+};
 
 export type OGP = {
   url?: string;
