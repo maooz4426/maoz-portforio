@@ -62,7 +62,7 @@ const BlogsPage = () => {
         </div>
       </AnimatePresence>
       <div className={style.updateButtonContainer}>
-        <Button variant="outline" onClick={onUpdateClick} className={style.updateButton}>更新</Button>
+        <Button variant="outline" onClick={onUpdateClick} className={style.updateButton}>さらに記事を見る</Button>
       </div>
 
     </>
