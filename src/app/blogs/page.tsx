@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { BlogCard } from "@/features/blog/components";
 import { fetchOgp } from "@/features/blog/funcs/ogp";
 import { fetchMyQiitaURLs } from "@/features/blog/funcs/qiita";
@@ -8,14 +9,24 @@ import React from "react";
 import style from "./style.module.scss";
 
 const BlogsPage = () => {
-  const [ogps, setOgps] = React.useState<OGP[]>();
+  const [ogps, setOgps] = React.useState<OGP[]>([]);
+  const [page, setPage] = React.useState(1);
   const [_loading, setLoading] = React.useState(true);
+
+  const onUpdateClick = async () => {
+    setPage(prev => prev + 1);
+    const urls = await fetchMyQiitaURLs(page);
+
+    const ogpPromises = urls.map(url => fetchOgp(url));
+    const results = await Promise.all(ogpPromises);
+    setOgps(prev => [...prev, ...results]);
+  };
 
   React.useEffect(() => {
     const fetch = async () => {
       try {
         setLoading(true);
-        const urls = await fetchMyQiitaURLs();
+        const urls = await fetchMyQiitaURLs(page);
 
         const ogpPromises = urls.map(url => fetchOgp(url));
         const results = await Promise.all(ogpPromises);
@@ -49,6 +60,11 @@ const BlogsPage = () => {
           </div>
         </div>
       </AnimatePresence>
+      <div className={style.updateButtonContainer}>
+        <Button variant="outline" onClick={onUpdateClick} className={style.updateButton}>
+          さらに記事を見る
+        </Button>
+      </div>
     </>
   );
 };

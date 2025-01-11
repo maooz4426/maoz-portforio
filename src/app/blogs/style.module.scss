@@ -44,3 +44,14 @@
   height: 19rem;
   overflow: hidden;
 }
+
+.updateButtonContainer{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.updateButton{
+  margin: 1rem 0;
+  background: theme.$foreground;
+}
