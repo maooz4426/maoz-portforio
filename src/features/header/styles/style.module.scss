@@ -1,0 +1,109 @@
+//@use './mixins' as mixins;
+@use "@/styles/theme";
+@use "@/styles/animation";
+
+
+
+.headerContainer {
+  display: flex;
+  position: relative;
+}
+
+
+@mixin neon-signs-text($color,$name){
+  @keyframes #{$name} {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      text-shadow:
+              -0.2rem -0.2rem 1rem $color,
+              0.2rem 0.2rem 1rem $color,
+              0 0 2rem $color,
+              0 0 4rem $color,
+              0 0 6rem $color,
+              0 0 8rem $color,
+              0 0 10rem $color;
+
+    }
+    20%, 24%, 55% {
+      text-shadow: none;
+    }
+  }
+}
+
+
+.headerTitle{
+  font-size: 3rem;
+  margin: 1rem;
+  color: theme.$hotpink;
+  $animation-name: neon-signs-#{unique-id()};
+  @include neon-signs-text(theme.$hotpink, $animation-name);
+  animation: $animation-name 1.5s ease infinite;
+}
+
+
+.headerTitle span{
+  @include animation.blinkText
+}
+
+
+.menuContainer{
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+
+@mixin headerContent($color){
+  font-size: 2rem;
+  margin: 1rem 1rem 1rem 4rem;
+  color: white;
+  text-decoration: none;
+
+  position: relative;
+
+
+  &:hover{
+    $animation-name: neon-signs-#{unique-id()};
+    @include neon-signs-text($color, $animation-name);
+    color: $color;
+    animation: $animation-name 1.5s ease infinite;
+
+    span{
+      @include animation.blinkText;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: $color;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.about{
+  @include headerContent(theme.$deeppink);
+}
+
+.works{
+  @include headerContent(theme.$hotyellow)
+}
+
+.blogs{
+  @include headerContent(theme.$hotblue)
+}
+.headerContent{
+  @include headerContent(theme.$lightpurple)
+
+}
+
+
+

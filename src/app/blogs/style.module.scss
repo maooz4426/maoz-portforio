@@ -1,0 +1,57 @@
+@use "@/styles/theme";
+@use "@/styles/animation";
+.titleContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  width: auto;
+  font-size: 3rem ;
+  color: theme.$hotblue;
+  text-shadow: 0 0 2rem theme.$hotblue;
+
+  border-bottom: 0.1rem solid theme.$hotblue;
+  padding: 0 1rem;
+  margin: 1rem;
+}
+.title span{
+  @include animation.blinkText
+}
+
+.blogsContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+
+.blogTitle{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  background: theme.$foreground;
+  color: theme.$white;
+  width: 30rem;
+  height: 19rem;
+  overflow: hidden;
+}
+
+.updateButtonContainer{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.updateButton{
+  margin: 1rem 0;
+  background: theme.$foreground;
+}

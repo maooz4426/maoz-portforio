@@ -1,0 +1,64 @@
+@use "@/styles/theme.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+}
+
+.icon{
+  border-radius: 50%;
+  box-shadow: 0 0 10px 5px theme.$darkpurple;
+  position: relative;
+  display: inline-block;
+  width: 500px;
+  height: 500px;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.icon::after ,.icon::before{
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background-image:
+          conic-gradient(from var(--angle),     transparent 0%,
+                  transparent 65%,
+                  theme.$darkpurple 71%,
+                  theme.$purple 72%,
+                  theme.$darkpurple 73%,
+                  transparent 79%,
+                  transparent 100%);
+  top: 50%;
+  left: 50%;
+  width: 103%;
+  height: 103%;
+  translate: -50% -50%;
+  display: block;
+  z-index: -1;
+
+  animation: border-animation 1.5s linear infinite;
+}
+
+.icon::before{
+  filter: blur(1.5rem);
+}
+
+@keyframes border-animation {
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+.iconContainer{
+  display: flex;
+  margin-top: 2rem;
+}
+

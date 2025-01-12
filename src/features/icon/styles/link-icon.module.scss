@@ -1,0 +1,10 @@
+@use "@/styles/animation";
+.icon{
+  margin: 1rem;
+  transition: transform 0.2s ease;
+  position: relative;
+  &:hover{
+    transform: scale(1.5);
+  }
+  
+}

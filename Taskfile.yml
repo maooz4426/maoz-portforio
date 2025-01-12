@@ -1,0 +1,13 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task --list-all
+  hello:
+    cmds:
+      - echo 'Hello World from Task!'
+    silent: true
+  biome:fix:
+    cmds:
+      - pnpm biome check --write ./src

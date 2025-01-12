@@ -1,0 +1,73 @@
+@use "@/styles/theme";
+@use "@/styles/animation";
+.titleContainer{
+  display: flex;
+  justify-content: center;
+}
+.title{
+  display: inline;
+  font-size: 3rem;
+  border-bottom:  0.1rem solid theme.$deeppink;
+  color: theme.$deeppink;
+  text-shadow: 0 0 2rem theme.$deeppink;
+}
+.title span{
+  @include animation.blinkText
+}
+//@keyframes blink {
+//  78% {
+//    color: inherit;
+//    text-shadow: inherit;
+//  }
+//  79%{
+//    color: #333;
+//  }
+//  80% {
+//
+//    text-shadow: none;
+//  }
+//  81% {
+//    color: inherit;
+//    text-shadow: inherit;
+//  }
+//  82% {
+//    color: #333;
+//    text-shadow: none;
+//  }
+//  83% {
+//    color: inherit;
+//    text-shadow: inherit;
+//  }
+//  92% {
+//    color: #333;
+//    text-shadow: none;
+//  }
+//  92.5% {
+//    color: inherit;
+//    text-shadow: inherit;
+//  }
+//}
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+
+.profileContainer{
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+  //justify-content: center;
+}
+
+.name{
+  font-size: 3rem;
+}
+
+.detail{
+  font-size: 1rem;
+  margin: 0;
+}
